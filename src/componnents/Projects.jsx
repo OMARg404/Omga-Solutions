@@ -63,7 +63,7 @@ const scrollToBottom = () => {
         method: "POST",
         headers: {
           Authorization:
-            "Bearer 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",
+            "Bearer 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",
           "HTTP-Referer": "http://localhost:3000",
           "X-Title": "Omga-Solutions",
           "Content-Type": "application/json",
