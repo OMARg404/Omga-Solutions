@@ -7,28 +7,22 @@ export const Footer = () => {
   return (
     <footer className="footer">
       <Container>
-        {/* First Row: Logo + CV Button */}
+        {/* First Row: Logo + Dev Text */}
         <Row className="align-items-center mb-3">
           <Col xs={12} md={6} className="text-start">
             <img src={logo} alt="Logo" className="footer-logo" />
           </Col>
           <Col xs={12} md={6} className="text-center text-md-end mt-3 mt-md-0">
-            <a
-              href="/Omar-Abdelrahman-cv-6-2025.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cv-button"
-              style={{ display: "inline-block", padding: "12px 30px", fontSize: "16px" }}
-            >
-              <span>📄 View My CV (PDF)</span>
-            </a>
+            <span style={{ fontSize: "16px", fontWeight: "500" }}>
+              Omga-Solutions Dev
+            </span>
           </Col>
         </Row>
 
         {/* Second Row: Social Icons + Copyright */}
         <Row className="align-items-center">
           <Col xs={12} md={6} className="text-center text-md-start mt-3 mt-md-0">
-            <p>© 2025. All Rights Reserved. Owned by Omar Abdelrahman</p>
+            <p>© 2025. All Rights Reserved. Owned by Omga-Solutions Dev</p>
           </Col>
           <Col xs={12} md={6} className="text-center text-md-end">
             <div className="social-icon">

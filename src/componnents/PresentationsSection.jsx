@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import colorSharp from "../assets/img/color-sharp.png";
-
-// استيراد PDF Viewer
+import { Container, Row, Col } from "react-bootstrap";
+import headerImg from "../assets/img/oo.jpg";
+import { FaBrain, FaLaptopCode, FaDatabase } from "react-icons/fa";
 import { Worker, Viewer } from '@react-pdf-viewer/core';
 import '@react-pdf-viewer/core/lib/styles/index.css';
 import '@react-pdf-viewer/default-layout/lib/styles/index.css';
@@ -15,24 +16,23 @@ export const PresentationsSection = () => {
     {
       title: "OMGA AI Intro",
       description: "Introduction to OMGA AI, services, pricing, and models.",
-      link: "/OMGA-AI.pdf", // ملف موجود في public
+      link: "/OMGA-AI.pdf",
     },
     {
       title: "Python & AI Fundamentals",
       description: "A 6-level Python course covering fundamentals and AI basics.",
-      link: "/Python-Roadmap.pdf", // ملف موجود في public
+      link: "/Python-Roadmap.pdf",
     },
     {
       title: "Web Development Roadmap",
       description: "Comprehensive roadmap for learning web development.",
-      link: "/Web-development-Roadmap.pdf", // ملف موجود في public
+      link: "/Web-development-Roadmap.pdf",
     }
   ];
 
-
   const handleCardClick = (idx) => {
     setActiveIdx(idx);
-    document.body.classList.add("modal-open"); // منع تمرير الخلفية
+    document.body.classList.add("modal-open");
   };
 
   const handleClose = () => {
@@ -66,10 +66,9 @@ export const PresentationsSection = () => {
               <p className="card-desc">{p.description}</p>
 
               <div style={{ height: activeIdx === idx ? '90vh' : '60vh' }}>
-               <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js">
-    <Viewer fileUrl={p.link} />
-</Worker>
-
+                <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js">
+                  <Viewer fileUrl={p.link} />
+                </Worker>
               </div>
 
               {activeIdx === idx && (
@@ -81,6 +80,47 @@ export const PresentationsSection = () => {
           ))}
         </Carousel>
       </div>
+
+      {/* 🌟 Banner Section */}
+      <div
+  className="extra-banner-section"
+  style={{
+    marginTop: "40px",
+    padding: "40px 0",
+    background: "linear-gradient(90deg, #0a192f, #1f4068)",
+    color: "#fff",
+  }}
+>
+  <Container>
+    <Row className="align-items-center text-center">
+      <Col md={6}>
+        <img
+          src={headerImg}
+          alt="Innovation Banner"
+          style={{
+            width: "100%",
+            borderRadius: "20px",
+            boxShadow: "0 0 20px rgba(0,0,0,0.5)",
+          }}
+        />
+      </Col>
+
+      <Col md={6}>
+        <h2 style={{ fontWeight: "bold", marginBottom: "20px" }}>🚀 Elevate Your Projects</h2>
+        <p style={{ fontSize: "1.1rem", marginBottom: "30px" }}>
+          Transform your ideas into powerful applications using AI, Web, and Data Science.
+          We provide tailored solutions to fit your vision and business goals.
+        </p>
+        <div className="banner-icons" style={{ fontSize: "1.5rem" }}>
+          <FaBrain style={{ margin: "0 15px" }} />
+          <FaLaptopCode style={{ margin: "0 15px" }} />
+          <FaDatabase style={{ margin: "0 15px" }} />
+        </div>
+      </Col>
+    </Row>
+  </Container>
+</div>
+
 
       <img className="presentations-bg" src={colorSharp} alt="Background" />
     </section>
