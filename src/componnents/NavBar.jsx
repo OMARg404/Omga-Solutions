@@ -5,7 +5,6 @@ import navIcon1 from "../assets/img/nav-icon1.svg"; // LinkedIn
 import navIcon3 from "../assets/img/nav-icon3.svg"; // Instagram
 import { HashLink } from "react-router-hash-link";
 
-
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
@@ -49,50 +48,81 @@ export const NavBar = () => {
             >
               Solutions
             </Nav.Link>
-           <Nav.Link
-  href="#chat"  // هنا غيرنا href
-  className={activeLink === "projects" ? "active navbar-link" : "navbar-link"}
-  onClick={() => onUpdateActiveLink("projects")}
->
-  BotChat
-</Nav.Link>
-<Nav.Link
-  href="#presentations"
-  className={activeLink === "presentations" ? "active navbar-link" : "navbar-link"}
-  onClick={() => onUpdateActiveLink("presentations")}
->
-  Proposals
-</Nav.Link>
-
+            <Nav.Link
+              href="#chat"
+              className={activeLink === "projects" ? "active navbar-link" : "navbar-link"}
+              onClick={() => onUpdateActiveLink("projects")}
+            >
+              BotChat
+            </Nav.Link>
+            <Nav.Link
+              href="#presentations"
+              className={activeLink === "presentations" ? "active navbar-link" : "navbar-link"}
+              onClick={() => onUpdateActiveLink("presentations")}
+            >
+              Proposals
+            </Nav.Link>
           </Nav>
+
           <span className="navbar-text">
             <div className="social-icon">
-  <a
-    href="https://www.linkedin.com/in/omar-abdelrahman-10260829a/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img src={navIcon1} alt="LinkedIn" />
-  </a>
+              {/* LinkedIn */}
+              <a
+                href="https://www.linkedin.com/company/omga-solutions/about/?viewAsMember=true"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={navIcon1} alt="LinkedIn" />
+              </a>
 
-  {/* GitHub بنفس تنسيق باقي الأيقونات */}
-  <a
-    href="https://github.com/OMARg404"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <i className="fa fa-github" aria-hidden="true" style={{ fontSize: '20px', zIndex: 1 }}></i>
-  </a>
+              {/* GitHub */}
+              <a
+                href="https://github.com/OMARg404"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i
+                  className="fab fa-github"
+                  aria-hidden="true"
+                  style={{ fontSize: "20px", zIndex: 1 }}
+                ></i>
+              </a>
 
-  <a
-    href="https://www.instagram.com/omar_hasballa/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img src={navIcon3} alt="Instagram" />
-  </a>
-</div>
+              {/* Instagram */}
+              <a
+                href="https://www.instagram.com/omga_solutions/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={navIcon3} alt="Instagram" />
+              </a>
 
+              {/* Facebook */}
+              <a
+                href="https://www.facebook.com/profile.php?id=61581560533678"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i
+                  className="fab fa-facebook"
+                  aria-hidden="true"
+                  style={{ fontSize: "20px", zIndex: 1, marginLeft: "5px" }}
+                ></i>
+              </a>
+
+              {/* TikTok */}
+              <a
+                href="https://www.tiktok.com/@omga880"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i
+                  className="fab fa-tiktok"
+                  aria-hidden="true"
+                  style={{ fontSize: "20px", zIndex: 1, marginLeft: "5px" }}
+                ></i>
+              </a>
+            </div>
 
             <HashLink to="#connect">
               <button className="vvd">

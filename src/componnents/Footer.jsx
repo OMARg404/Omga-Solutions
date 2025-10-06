@@ -24,8 +24,10 @@ export const Footer = () => {
           <Col xs={12} md={6} className="text-center text-md-start mt-3 mt-md-0">
             <p>© 2025. All Rights Reserved. Owned by Omga-Solutions Dev</p>
           </Col>
+
           <Col xs={12} md={6} className="text-center text-md-end">
             <div className="social-icon">
+              {/* LinkedIn */}
               <a
                 href="https://www.linkedin.com/in/omar-abdelrahman-10260829a/"
                 target="_blank"
@@ -33,26 +35,66 @@ export const Footer = () => {
               >
                 <img src={navIcon1} alt="LinkedIn" />
               </a>
+
+              {/* GitHub */}
               <a
                 href="https://github.com/OMARg404"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa fa-github" aria-hidden="true"></i>
+                <i
+                  className="fab fa-github"
+                 
+                ></i>
               </a>
+
+              {/* Instagram */}
               <a
                 href="https://www.instagram.com/omar_hasballa/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={navIcon3} alt="Instagram" />
+                <img
+                  src={navIcon3}
+                  alt="Instagram"
+                 
+                />
               </a>
+
+              {/* Facebook */}
+              <a
+                href="https://www.facebook.com/profile.php?id=61581560533678"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i
+                  className="fab fa-facebook"
+                  
+                ></i>
+              </a>
+
+              {/* TikTok */}
+              <a
+                href="https://www.tiktok.com/@omga880"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i
+                  className="fab fa-tiktok"
+                  
+                ></i>
+              </a>
+
+              {/* YouTube */}
               <a
                 href="https://www.youtube.com/@oMgaCode_omarAbdelrahman"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa fa-youtube" aria-hidden="true"></i>
+                <i
+                  className="fab fa-youtube"
+                 
+                ></i>
               </a>
             </div>
           </Col>
