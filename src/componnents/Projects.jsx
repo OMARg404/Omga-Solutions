@@ -14,7 +14,7 @@ const ChatMessage = ({ sender, text }) => (
 
 export const Projects = () => {
   const [messages, setMessages] = useState([
-    { sender: "bot", text: "Hello 👋 I'm Omga-Serves 🤖 from Omga-Solutions!" },
+    { sender: "bot", text: "Hello 👋 I'm Omga-services 🤖 from Omga-Solutions!" },
   ]);
   const [input, setInput] = useState("");
   const messagesEndRef = useRef(null);
