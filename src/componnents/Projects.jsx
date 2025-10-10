@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+const apiKey = process.env.REACT_APP_OPENROUTER_API_KEY;
 
 const ChatMessage = ({ sender, text }) => (
   <div className={`chat-message ${sender}`}>
@@ -63,7 +64,7 @@ const scrollToBottom = () => {
         method: "POST",
         headers: {
           Authorization:
-            "Bearer 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",
+            "Bearer "+apiKey,
           "HTTP-Referer": "http://localhost:3000",
           "X-Title": "Omga-Solutions",
           "Content-Type": "application/json",
